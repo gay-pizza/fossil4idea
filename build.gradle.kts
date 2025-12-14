@@ -1,3 +1,4 @@
+/*
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PLUGIN_MODULE" version="4">
   <component name="DevKit.ModuleBuildProperties" url="file://$MODULE_DIR$/META-INF/plugin.xml" />
@@ -12,4 +13,31 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
+ */
+
+plugins {
+  id("java")
+  //id("org.jetbrains.kotlin.jvm") version "2.2.21"
+  id("org.jetbrains.intellij.platform") version "2.10.5"
+}
+
+repositories {
+  intellijPlatform {
+    defaultRepositories()
+  }
+}
+
+dependencies {
+  intellijPlatform {
+    intellijIdea(providers.gradleProperty("platformVersion"))
+  }
+}
+
+sourceSets {
+  main {
+    java {
+      srcDirs("src")
+    }
+  }
+}
 
