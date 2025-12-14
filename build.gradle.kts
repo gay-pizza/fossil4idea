@@ -34,17 +34,3 @@ dependencies {
     intellijIdea(providers.gradleProperty("platformVersion"))
   }
 }
-
-sourceSets {
-  main {
-    java {
-      srcDirs("src")
-    }
-  }
-  test {
-    java {
-      srcDirs("test")
-    }
-  }
-}
-
