@@ -39,5 +39,10 @@ sourceSets {
       srcDirs("src")
     }
   }
+  test {
+    java {
+      srcDirs("test")
+    }
+  }
 }
 
